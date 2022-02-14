@@ -1,1 +1,13 @@
-
+Bracket Pair Colorizer 2 | CoenraadS
+-------------------------
+Mithril Emmet | FallenMax
+-------------------------
+npm | Microsoft
+-------------------------
+open in browser | TechER
+-------------------------
+Prettier - Code formatter | Prettier
+-------------------------
+vscode-icons | VSCode Icons Team
+-------------------------
+Live Server | Ritwick Dey
