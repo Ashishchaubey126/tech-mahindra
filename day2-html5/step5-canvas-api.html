@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+       canvas{
+            border: 1px solid red;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Examples</h1>
+    <hr>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        var ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
+        var boxX = 100;
+        var boxRot = 0;
+            setInterval(function(){
+                ctx.clearRect(0,0,500,500);
+                ctx.rotate((Math.PI / 180) * boxRot);
+                ctx.fillRect(boxX,100,100,100);
+                // boxX += 10;
+                boxRot+=1;
+                console.log("box added");
+            },1000);
+    </script>
+</body>
+</html>
+
+<!--
+   
+-->

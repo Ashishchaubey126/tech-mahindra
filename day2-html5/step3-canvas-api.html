@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+       canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Examples</h1>
+    <hr>
+    <canvas></canvas>
+<!--     <img id="raj" src="images/rajani.jpg"> -->
+    <script>
+        var can = document.getElementsByTagName("canvas")[0];
+            can.width = 250;
+            can.height = 250;
+       /*  var ctx = can.getContext("2d");
+            ctx.textAlign = "center";
+            ctx.font = "bold 40px arial";
+            ctx.fillStyle = "red";
+            ctx.fillText("Tech Mahindra",150,85); */
+        var ctx = can.getContext("2d");
+        /* setTimeout(function(){
+            ctx.drawImage(document.getElementById("raj"),0,0);
+        },10) */
+        var image = new Image();
+            image.src = "images/rajani.jpg";
+            // ctx.scale(1,1);
+            // ctx.rotate((Math.PI/180)*45);
+            // ctx.translate(50,0);
+            image.addEventListener("load", function(evt){
+                ctx.drawImage(evt.target,0,0);
+            });
+
+    </script>
+</body>
+</html>
+
+<!--
+    create text on canvas with Tech in black and Mahindra in red 
+-->
