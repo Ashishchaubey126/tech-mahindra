@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid darkblue;
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script>
+        var ctx;
+        var boxX = 0;
+        var boxY = 0;
+        var boxW = 0;
+        var boxH = 0;
+        window.onload = function(){
+            ctx = document.getElementById("can").getContext("2d");
+            setInterval(animation, 10);
+        };
+        function animation(){
+            ctx.clearRect(0,0,500,500);
+            boxX = Math.round( Math.random() * 500 );
+            boxY = Math.round( Math.random() * 500 );
+            boxW = Math.round( Math.random() * 100 );
+            boxH = Math.round( Math.random() * 100 );
+            ctx.fillRect(boxX,boxY,boxW,boxH);
+        };
+    </script>
+</head>
+<body>
+    <canvas width="500" height="500" id="can"></canvas>
+</body>
+</html>

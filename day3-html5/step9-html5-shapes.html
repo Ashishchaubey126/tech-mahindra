@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid darkblue;
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script>
+        var ctx;
+        onload = function(){
+            ctx = document.getElementById("can").getContext("2d");
+
+            ctx.beginPath();
+            ctx.arc(50, 50, 50, (Math.PI / 180) * 0, (Math.PI / 180) * 360, false);
+            ctx.closePath();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(200, 150, 50, (Math.PI / 180) * 0, (Math.PI / 180) * 360, false);
+            ctx.closePath();
+            ctx.stroke();
+        }
+    </script>
+</head>
+<body>
+    <canvas width="500" height="500" id="can"></canvas>
+</body>
+</html>
+
+<!-- 
+    create random radius and random color circles like the previous example
+-->
