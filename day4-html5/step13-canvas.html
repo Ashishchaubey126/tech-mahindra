@@ -9,18 +9,26 @@
         #box{
             margin: 0px;
             padding: 0px;
+            overflow: hidden;
         }
     </style>
     <script>
         var can, ctx;
         addEventListener("load",function(){
            can = document.getElementsByTagName("canvas")[0];
+           addEventListener("resize",resizeFun);
+           paintIt();
+        });
+        function paintIt(){
            can.width = window.innerWidth;
            can.height = window.innerHeight;
            ctx = can.getContext("2d");
            ctx.fillStyle = "orange";
            ctx.fillRect(0,0,2000,2000);
-        })
+        }
+        function resizeFun(){
+            paintIt();
+        }
     </script>
 </head>
 <body id="box">
