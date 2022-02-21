@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <script>
+        /* console.log("line 9");
+        setTimeout(()=>console.log("line 10"),2000);
+        console.log("line 11");
+        console.log("line 12"); */
+        
+        console.log("line 14");
+        let promise = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                if(true){
+                    resolve("Success Data");
+                    console.log("line 15");
+                }else{
+                    reject("Error Data");
+                }
+            },2000);
+        });
+        console.log("line 25");
+        console.log("line 26");
+
+        /*    
+        promise.then((res)=>{
+            console.log("promise is success ", res);
+        }).catch((err)=>{
+            console.log("promise failed ", err);
+        }).finally(()=>{
+            console.log("promise is complete");
+        }) 
+        */
+        /* promise.then(
+            (res)=>{
+            console.log("promise is success ", res);
+            },
+            (err)=>{
+            console.log("promise failed ", err);
+            })
+            .finally(()=>{
+            console.log("promise is complete");
+        }) */
+
+        promise
+        .then(function(res){
+            console.log("first callback ", res);
+            return res.toUpperCase();
+        })
+        .then(function(res){
+            console.log("second callback ", res);
+            return res.toLowerCase();
+        })
+        .then(function(res){
+            console.log("third callback ", res);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
